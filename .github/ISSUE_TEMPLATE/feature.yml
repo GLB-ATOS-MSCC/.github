@@ -1,0 +1,54 @@
+name: ✨ Feature Request
+description: Suggest a new idea or improvement
+title: "[FEATURE] <short description>"
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us understand your idea better.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      placeholder: e.g. "Add support for DAG version rollback"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      placeholder: Describe the business or technical value
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Describe how you imagine it would work
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered (optional)
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: ✅ Definition of Done
+      description: Please confirm that the following criteria are met before closing the issue.
+      options:
+        - label: Unit tests, where possible, are automated via CI/CD to contribute to the regression test base
+        - label: Issue design principle has been followed to obtain highest automation level possible and best coding standards were used (e.g. minification, testing etc)
+        - label: Issue design has been consulted with and approved by EPIS architecture board
+        - label: Issue design has been consulted with and approved by Lead Architect
+        - label: Issue design has been consulted with and approved by Pillar Lead
+        - label: The issue was reviewed, tested and accepted by at least one Pillar Member
+        - label: Where possible, issue followed unit, integration and acceptance testing (full cycle)
+        - label: All discovered bugs have been resolved unless exceptions were decided by Approver
+        - label: All delivered code and PRs have been accepted and merged into correct code branch
+        - label: Documentation is created
+        - label: All the code and documentation are in the repository

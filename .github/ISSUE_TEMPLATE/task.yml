@@ -1,0 +1,37 @@
+name: ✅ Task
+description: Define a technical or organizational task
+title: "[TASK] <short description>"
+labels: [task]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Task summary
+      placeholder: e.g. "Refactor GitSync configuration"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Description
+      placeholder: Provide details about the task, context, dependencies, etc.
+
+  - type: checkboxes
+    id: categories
+    attributes:
+      label: Task type
+      options:
+        - label: 🧹 Refactoring / Cleanup
+        - label: 🧪 Testing
+        - label: 📝 Documentation
+        - label: 🔄 CI/CD
+        - label: 🔧 Code maintenance
+        - label: 🎯 Planning / Coordination
+        - label: ✏️ Modification
+
+  - type: input
+    id: due
+    attributes:
+      label: (Optional) Due date
+      placeholder: e.g. 2025-06-15

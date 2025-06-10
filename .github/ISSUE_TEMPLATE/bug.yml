@@ -1,0 +1,149 @@
+name: '🐞 Bug Report'
+description: Report a bug or an issue you encountered on the platform.
+title: '[BUG]: Brief description of the problem'
+labels: ['bug', 'triage']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill out the fields below as thoroughly as possible.
+        This will help us quickly diagnose and resolve the issue.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: 'Problem Description'
+      description: A clear and concise description of the bug or issue. What exactly is happening?
+      placeholder: Describe the problem...
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 'Steps to Reproduce'
+      description: |
+        Provide the exact steps that lead to the bug.
+        E.g., "1. Open...", "2. Click...", "3. Enter..."
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 'Expected Behavior'
+      description: What behavior was expected after performing the above steps?
+      placeholder: It was expected that...
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: 'Current Behavior'
+      description: What is the actual, incorrect behavior?
+      placeholder: Instead, it happens that...
+      render: markdown
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Initial Diagnosis / Potential Root Cause
+
+        To help us pinpoint the problem, please answer the following questions to the best of your ability.
+        Even if you're unsure, your answers provide valuable clues.
+
+  - type: textarea
+    id: initial-diagnosis
+    attributes:
+      label: 'Diagnostic Questions & Your Findings'
+      description: |
+        Consider the following common problem areas and provide your observations:
+        * **Access/Connectivity:** Can you reach other services on the platform? Is it a general network issue or specific to this application?
+        * **Authentication/Authorization (e.g., Keycloak):** Are you able to log in to Keycloak? Are there any error messages related to authentication? Have you tried logging in with different credentials or roles?
+        * **Application Logs (e.g., Airflow):** Have you checked the logs of the affected application (e.g., Airflow pods)? Are there any error messages related to application startup, configuration, or internal errors?
+        * **Platform Exposure (Ingress/Gateway):** Is the application reachable via its external URL? Have you checked if the Ingress/Gateway resource is healthy and correctly configured? Can you access the application via an internal route if available?
+        * **Resource Provisioning (Crossplane):** If this application relies on a Crossplane-provisioned resource (e.g., a database, a message queue), is that resource healthy and ready according to its status in Kubernetes (e.g., `kubectl get xr <your-xr-name>`)?
+        * **Dependencies:** Does the application depend on other services that might be down or misconfigured?
+      placeholder: |
+        - **Access/Connectivity:** [Your findings]
+        - **Authentication/Authorization:** [Your findings]
+        - **Application Logs:** [Your findings]
+        - **Platform Exposure:** [Your findings]
+        - **Resource Provisioning:** [Your findings]
+        - **Dependencies:** [Your findings]
+        ---
+        **Based on the above, what do you suspect is the primary affected component or area?**
+      render: markdown
+    validations:
+      required: true
+
+  - type: input
+    id: affected-component
+    attributes:
+      label: 'Primary Affected Platform Component'
+      description: Based on your diagnosis, which specific component of the platform is primarily affected by this issue?
+    validations:
+      required: true
+
+  - type: textarea
+    id: crossplane-config-details
+    attributes:
+      label: 'Crossplane Configuration Details (if applicable)'
+      description: |
+        Provide relevant snippets of Crossplane manifests (Compositions, XR, XRC, Configuration) related to the problem.
+        Remember to remove sensitive data!
+      placeholder: |
+        ```yaml
+        apiVersion: ...
+        kind: ...
+        metadata: ...
+        spec: ...
+        ```
+      render: markdown
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: 'Error Logs / Messages'
+      description: |
+        Attach relevant logs from pods, Crossplane controllers, or other components that might help with diagnosis.
+        Use code blocks.
+      placeholder: |
+        ```
+        <Paste logs here>
+        ```
+      render: markdown
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 'Environment'
+      description: Which environment did the problem occur in?
+      options:
+        - Production
+        - Pre-production
+        - Staging
+        - Development
+        - Local
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: 'Additional Information'
+      description: Are there any other helpful details, screenshots, or recordings? If you selected 'Other' for the component, please specify here.
+      placeholder: Any other relevant data...
+      render: markdown

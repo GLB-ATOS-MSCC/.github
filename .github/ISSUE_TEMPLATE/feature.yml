@@ -59,5 +59,4 @@ body:
         - label: All discovered bugs have been resolved unless exceptions were decided by Approver
         - label: All delivered code and PRs have been accepted and merged into correct code branch
         - label: Documentation is created
-
-      
+        - label: All the code and documentation are in the repository

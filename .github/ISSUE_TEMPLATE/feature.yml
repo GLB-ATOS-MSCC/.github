@@ -36,6 +36,17 @@ body:
       label: Alternatives considered (optional)
 
   - type: checkboxes
+    id: definition_of_ready
+    attributes:
+      label: ✅ Definition of Ready
+      description: Please confirm that the following criteria are met before pulling the issue into the sprint backlog.
+      options:
+        - label: Job Done Definition/Acceptance Criteria well described.
+        - label: Architecture sign-off (a link to the approved design and Architecture Chapter decision should be present in the issue).
+        - label: Testing scenarios defined
+        - label: No blockers
+
+  - type: checkboxes
     id: definition_of_done
     attributes:
       label: ✅ Definition of Done
@@ -43,9 +54,6 @@ body:
       options:
         - label: Unit tests, where possible, are automated via CI/CD to contribute to the regression test base
         - label: Issue design principle has been followed to obtain highest automation level possible and best coding standards were used (e.g. minification, testing etc)
-        - label: Issue design has been consulted with and approved by EPIS architecture board
-        - label: Issue design has been consulted with and approved by Lead Architect
-        - label: Issue design has been consulted with and approved by Pillar Lead
         - label: The issue was reviewed, tested and accepted by at least one Pillar Member
         - label: Where possible, issue followed unit, integration and acceptance testing (full cycle)
         - label: All discovered bugs have been resolved unless exceptions were decided by Approver

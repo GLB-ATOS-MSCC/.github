@@ -1,0 +1,26 @@
+name: :bookmark: Roadmap Item
+description: Suggest a new idea or improvement
+title: "[ROADMAP ITEM] <short description>"
+labels: ["Roadmap Item"]
+projects: ["EPIS Management"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us understand your idea better.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      placeholder: e.g. "Provide new hyperscaler support"
+    validations:
+      required: false
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      placeholder: Describe the business or technical value
+    validations:
+      required: false

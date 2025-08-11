@@ -2,6 +2,7 @@ name: "🔖 Roadmap Item"
 description: New feature idea
 title: "[ROADMAP] <short description>"
 labels: [type:"Roadmap Item"]
+projects: [name:"EPIS Management"]
 
 body:
   - type: markdown

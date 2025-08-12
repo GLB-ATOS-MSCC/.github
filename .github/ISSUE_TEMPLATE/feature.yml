@@ -1,7 +1,7 @@
 name: ✨ Feature Request
 description: Suggest a new idea or improvement
 title: "[FEATURE] <short description>"
-labels: [enhancement]
+labels: [enhancement,"Roadmap Item"]
 body:
   - type: markdown
     attributes:

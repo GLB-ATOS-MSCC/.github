@@ -3,6 +3,7 @@ description: Suggest a new idea or improvement
 title: "[FEATURE] <short description>"
 labels: [enhancement,"roadmap"]
 projects: ["GLB-ATOS-MSCC/16"]
+parent: "GLB-ATOS-MSCC/epis-management#123"
 body:
   - type: markdown
     attributes:
@@ -35,14 +36,6 @@ body:
     id: alternatives
     attributes:
       label: Alternatives considered (optional)
-  
-  - type: input
-    id: parent
-    attributes:
-      label: Parent issue - Roadmap Reference
-      description: "Use #123 (same repo) or owner/repo#123 (cross-repo, same org) e.g. GLB-ATOS-MSCC/epis-management#123. It can be added later via Relationship -> Add Parent"
-    validations:
-      required: false
 
   - type: checkboxes
     id: definition_of_ready

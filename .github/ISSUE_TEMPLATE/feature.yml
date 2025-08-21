@@ -3,7 +3,7 @@ description: Suggest a new idea or improvement
 title: "[FEATURE] <short description>"
 labels: [enhancement,"roadmap"]
 projects: ["GLB-ATOS-MSCC/16"]
-parent-issue: "GLB-ATOS-MSCC/epis-management#123"
+
 body:
   - type: markdown
     attributes:

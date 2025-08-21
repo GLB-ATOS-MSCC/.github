@@ -37,12 +37,12 @@ body:
       label: Alternatives considered (optional)
   
   - type: input
-      id: parent
-      attributes:
-        label: Parent issue - Roadmap Reference
-        description: "Use #123 (same repo) or owner/repo#123 (cross-repo, same org) e.g. GLB-ATOS-MSCC/epis-management#123."
-      validations:
-        required: false
+    id: parent
+    attributes:
+      label: Parent issue - Roadmap Reference
+      description: "Use #123 (same repo) or owner/repo#123 (cross-repo, same org) e.g. GLB-ATOS-MSCC/epis-management#123."
+    validations:
+      required: false
 
   - type: checkboxes
     id: definition_of_ready

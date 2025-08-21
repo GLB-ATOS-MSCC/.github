@@ -1,7 +1,8 @@
 name: ✨ Feature Request
 description: Suggest a new idea or improvement
 title: "[FEATURE] <short description>"
-labels: [enhancement,"Roadmap Item"]
+labels: [enhancement,"roadmap"]
+projects: ["GLB-ATOS-MSCC/16"]
 body:
   - type: markdown
     attributes:

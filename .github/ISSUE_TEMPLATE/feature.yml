@@ -40,8 +40,7 @@ body:
       id: parent
       attributes:
         label: Parent issue - Roadmap Reference
-        description: "Use #123 (same repo) or owner/repo#123 (cross-repo, same org)."
-        placeholder: "GLB-ATOS-MSCC/epis-management#123"
+        description: "Use #123 (same repo) or owner/repo#123 (cross-repo, same org) e.g. GLB-ATOS-MSCC/epis-management#123."
       validations:
         required: false
 

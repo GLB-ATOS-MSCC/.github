@@ -2,6 +2,7 @@ name: "🔖 Roadmap Item"
 description: New feature idea
 title: "[ROADMAP] <short description>"
 labels: [type:"roadmap"]
+type: "Feature"
 projects: ["GLB-ATOS-MSCC/16", "GLB-ATOS-MSCC/31"]
 
 body:

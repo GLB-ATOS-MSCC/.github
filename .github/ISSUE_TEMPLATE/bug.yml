@@ -2,6 +2,7 @@ name: '🐞 Bug Report'
 description: Report a bug or an issue you encountered on the platform.
 title: '[BUG]: Brief description of the problem'
 labels: ['bug', 'triage']
+type: "Bug"
 assignees: []
 body:
   - type: markdown

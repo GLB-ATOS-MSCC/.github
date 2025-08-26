@@ -2,7 +2,7 @@ name: ✨ Feature Request
 description: Suggest a new idea or improvement
 title: "[FEATURE] <short description>"
 labels: [enhancement,"roadmap"]
-issue-type: ["Feature"]
+type: ["Feature"]
 projects: ["GLB-ATOS-MSCC/16"]
 
 body:

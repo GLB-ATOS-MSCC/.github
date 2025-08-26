@@ -2,6 +2,7 @@ name: ✅ Task
 description: Define a technical or organizational task
 title: "[TASK] <short description>"
 labels: [task]
+type: "Task"
 body:
   - type: input
     id: summary

@@ -1,8 +1,9 @@
 name: '🐞 Bug Report'
 description: Report a bug or an issue you encountered on the platform.
 title: '[BUG]: Brief description of the problem'
-labels: ['bug', 'triage']
+labels: ['bug', 'triage',"roadmap"]
 type: "Bug"
+projects: ["GLB-ATOS-MSCC/16"]
 assignees: []
 body:
   - type: markdown

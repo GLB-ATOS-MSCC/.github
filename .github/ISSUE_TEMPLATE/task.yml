@@ -1,8 +1,10 @@
 name: ✅ Task
 description: Define a technical or organizational task
 title: "[TASK] <short description>"
-labels: [task]
+labels: [task,"roadmap"]
 type: "Task"
+projects: ["GLB-ATOS-MSCC/16"]
+
 body:
   - type: input
     id: summary
